@@ -1,0 +1,118 @@
+.resp-wd-2{
+    height: 100%;
+    background-image: url('../images/map.png');
+    background-color: #071021;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+    h2 {
+        position: relative;
+        margin: 0;
+        padding-top: 200px;
+        color: white;
+        font-family: $text-font;
+        text-align: center;
+        font-size: 42px;
+        font-weight: 500;
+    }
+
+    p {
+        margin: 0;
+        padding-top: 20px;
+        color: white;
+        font-family: $text-font;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .btn-2 {
+        position: absolute;
+        left: 42%;
+        right: 47%;
+        margin-top: 70px;
+
+        width: 205px;
+        height: 50px;
+        background-color: #267df4;
+        color: white;
+        border-radius: 50px;
+        border: 0;
+        font-family: $text-font;
+        font-size: 16px;
+
+        transition: color 0.25s ease-in-out;
+        transition:  background-color 0.25s ease-in-out;
+
+        @include for-exsm {
+            left: 26%;
+        }
+
+        @include for-esm {
+            left: 30%;
+          }
+      
+        @include for-md {
+          left: 38%;
+        }
+      
+        @include for-lg {
+          left: 41%;
+        }
+      
+        @include for-xl {
+          left: 42%;
+        }
+      
+      
+        &:hover{
+          background-color: rgb(38, 38, 38);
+          color: white;
+        }
+    }
+
+    .container-counter {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 300px;
+        padding-bottom: 50px;
+    }
+
+    .counter-item {
+
+        text-align: center;
+        padding-bottom: 50px;
+
+        p {
+            margin: 0;
+            font-size: 16px;
+            color: #0960d7;
+            font-family: $text-font;
+        }
+
+        @include for-exsm{
+            width: calc(50% - 25px);
+        }        
+        
+        @include for-md{
+            width: calc(25% - 25px);
+        }
+
+    }
+    
+    .counter { 
+        font-size: 32px;
+        font-weight: 500;
+        color: white;
+        font-family: $text-font;
+    }
+}
+
+
+
+
+  

@@ -1,0 +1,142 @@
+.about-us{
+    height: 100%;
+    background-color: $background-color;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 5%;
+    padding-top: 5%;
+
+    @include for-md {
+        padding-left: 5%;
+    }
+
+    @include for-xl {
+        padding-left: 10%;
+    }
+
+    padding-bottom: 150px;
+    border-bottom: 1px solid rgb(232, 231, 231);
+}
+
+.agency-perfect-info {
+    font-family: $text-font;
+    width: 270px;
+
+    .agency-title {
+        font-size: 18px;
+        color: black;
+    }
+
+    p {
+        margin-bottom: 30px;
+        font-size: 16px;
+        color: $text-color;
+    }
+
+    margin-right: 30px;
+
+    @include for-exsm{
+        width: 80%;
+    }
+
+    @include for-sm{
+        width: 200px;
+    }
+}
+
+.keep-in-touch {
+    font-family: $text-font;
+    width: 270px;
+    margin-left: 200px;
+
+    h3 {
+        font-weight: normal;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    li{
+        color: $text-color; 
+        list-style-type: none;
+        margin-left: -37px;
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+        margin-left: 20px;
+
+        &:hover, &:focus {
+            color: $text-green-color;
+        }
+    }
+
+    .leo {
+        padding-left: 10px;
+    }
+
+    @include for-exsm {
+        margin-left: 0;
+    }
+
+    @include for-esm {
+        margin-left: 0px;
+        padding-right: 10%;
+    }
+
+    @include for-sm {
+        margin-left: 0px;
+        width: 260px;
+    }
+
+    @include for-md {
+        margin-left: 50px;
+        padding-right: 0;
+    }
+
+    @include for-lg{
+        margin-left: 100px;
+        padding-right: 0;
+        margin-right: 8%;
+    }
+
+    @include for-xl{
+        margin-left: 300px;
+        margin-right: 1%;
+    }
+
+}
+
+.featured-links {
+    font-family: $text-font;
+    width: 270px;
+
+    h3 {
+        font-weight: normal;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    li{
+        color: $text-color; 
+        list-style-type: none;
+        margin-left: -58px;
+        margin-bottom: 20px;
+    }
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+        margin-left: 20px;
+        
+        &:hover, &:focus {
+            color: $text-green-color;
+        }
+    }
+
+    .leo {
+        padding-left: 10px;
+    }
+}

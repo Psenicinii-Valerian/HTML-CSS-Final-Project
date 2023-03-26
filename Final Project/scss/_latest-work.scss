@@ -1,0 +1,111 @@
+.latest-work {
+    text-align: center;
+
+    h1 {
+        position: relative;
+        font-weight: normal;
+        font-size: 42px;
+        font-family: $text-font;
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+    h1:after {
+        content: "";
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        width: 50px;
+        margin: 0 auto;
+        background-color: #267df4;
+    }
+
+    p {
+        margin-top: -30px;
+        color: $text-color;
+        font-size: 20px;
+        font-family: $text-font;
+        padding-bottom: 20px;
+    }
+}
+
+.work-images{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;   
+    padding-left: 5%;
+    gap: 60px;
+    padding-bottom: 70px;
+
+    .work-img { 
+        flex-wrap: wrap;
+        overflow-x: hidden;
+        position: relative;
+        img {
+            height: 270px;  
+        }
+
+        @include for-exsm {
+            width: calc(100% - 20px);
+
+        }
+    
+        @include for-sm {
+            width: calc(50% - 50px);
+        }
+    
+        @include for-lg {
+            width: calc(33% - 50px);
+        }
+    
+        @include for-xl {
+            width: calc(25% - 60px);
+        }
+    }
+
+    .work-wrapper {
+        position: absolute;
+        text-align: center;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 20px;
+        background-color: rgba($color: $background-color ,$alpha: 1);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+        width: 60%;
+
+        &:hover, &:focus {
+            opacity: 1;
+            cursor: pointer;
+        }
+
+        h3 {
+            color: black;
+            font-size: 18px;
+            font-family: $text-font;
+            font-weight: 500;
+            text-align: left;
+        }
+
+        .fa-arrow-right {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            bottom: 15px;
+            color: #26272d;
+            padding: 9px 14px;
+            border: 1px solid #26272d;
+            border-radius: 50px;
+
+            &:hover, &:focus {
+                background-color: #26272d;
+                color: white;
+            }
+        }      
+    }
+}
+

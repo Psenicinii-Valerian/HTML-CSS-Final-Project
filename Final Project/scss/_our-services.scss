@@ -1,0 +1,80 @@
+.services {
+    background-color: $background-color;
+    height: 100%;
+}
+
+.our-services {
+    text-align: center;
+
+    h1 {
+        position: relative;
+        font-weight: normal;
+        font-size: 42px;
+        font-family: $text-font;
+        padding-top: 100px;
+        padding-bottom: 70px;
+    }
+
+    h1:after {
+        content: "";
+        position: absolute;
+        bottom: 25px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        width: 50px;
+        margin: 0 auto;
+        background-color: #267df4;
+    }
+
+    p {
+        margin-top: -30px;
+        color: $text-color;
+        font-size: 20px;
+        font-family: $text-font;
+        padding-bottom: 50px;
+    }
+}
+
+.service-img{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0 25px 50px 25px;
+
+    .service-title {
+        padding-top: 15px;
+        font-family: $text-font;
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    .service-description {
+        font-family: $text-font;
+        font-size: 14px;
+        font-weight: normal;
+        color: $text-color;
+    }
+
+    @include for-exsm {
+        width: calc(100% - 50px);
+    }
+
+    @include for-md {
+        width: calc(50% - 50px);
+    }
+
+    @include for-lg {
+        width: calc(25% - 50px);
+    }
+}
+
+
+.service-images{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 10%;
+    padding-right: 10%;
+}

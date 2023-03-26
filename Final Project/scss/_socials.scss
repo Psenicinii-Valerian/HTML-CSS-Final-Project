@@ -1,0 +1,103 @@
+.social-and-copyrights{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    background-color: $background-color;
+    padding-left: 10%;
+    padding-bottom: 45px;
+}
+
+.rights-reserved {
+    width: 105px;
+    p{
+        color: $text-color;
+        font-family: $text-font;
+        font-size: 9px;
+    }
+
+    @include for-exsm{
+        margin-top: 15px;
+        p {
+            margin-left: 50%;
+            width: 105px;
+            text-align: center;
+        }
+    }
+
+    @include for-esm{
+        margin-top: -17px;
+        p {
+            margin-left: 0;
+            text-align: right;
+        }
+    }
+}
+
+.socials {
+
+    @include for-exsm{
+        padding-right: 30%;
+    }
+
+    @include for-esm{
+        padding-right: 20%;
+    }
+
+    @include for-sm{
+        padding-right: 30%;
+    }
+
+    @include for-md{
+        padding-right: 40%;
+    }
+
+    @include for-lg{
+        padding-right: 60%;
+    }
+}
+
+.social-item{
+    padding: 7px 17px;
+    border-radius: 50px;
+}
+
+.twitter-bg{
+    border: 1px solid $twitter-color;
+    color: $twitter-color;
+
+    &:hover, &:focus{
+        background-color: $twitter-color;
+        color: white;
+    }
+}
+
+.facebook-bg{
+    border: 1px solid $facebook-color;
+    color: $facebook-color;
+
+    &:hover, &:focus{
+        background-color: $facebook-color;
+        color: white;
+    }
+}
+
+.pinterest-bg{
+    border: 1px solid $pinterest-color;
+    color: $pinterest-color;
+
+    &:hover, &:focus{
+        background-color: $pinterest-color;
+        color: white;
+    }
+}
+
+.linkedin-bg{
+    border: 1px solid $linkedin-color;
+    color: $linkedin-color;
+
+    &:hover, &:focus{
+        background-color: $linkedin-color;
+        color: white;
+    }
+}

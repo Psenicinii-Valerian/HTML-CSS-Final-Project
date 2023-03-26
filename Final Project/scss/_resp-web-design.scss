@@ -1,0 +1,50 @@
+.responsive-text{
+    margin: 0;
+    text-align: left;
+    height: 350px;
+
+    h2 {
+        padding-left: 20%;
+        font-weight: normal;
+        font-size: 30px;
+        font-family: $text-font;
+    }
+
+    p {
+        padding-left: 20%;
+        padding-top: 10px;
+        color: $text-color;
+        font-size: 14px;
+        font-family: $text-font;
+        line-height: 1.5;
+    }
+
+    img {
+        position: absolute;
+        width: 520px;
+        height: 380px;
+        top: 110%;
+        right: 5%;
+
+        @include for-exsm {
+            display: none;
+        }
+
+        @include for-md {
+            display: block;
+        }
+    }
+
+    @include for-exsm{
+        padding-top: 700px;
+        padding-left: 5px;
+        width: 80%;      
+    }
+    
+    @include for-md {
+        padding-top: 60px;
+        padding-left: 40px;
+        width: 37%;
+    }
+}
+

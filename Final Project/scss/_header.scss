@@ -1,0 +1,418 @@
+.navigation-menu {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+
+  a {
+    position: relative;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+      color: $text-green-color;
+    }
+  }
+
+  // from collapse X
+  .menu-items {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .menu-item {
+    line-height: 26px;
+    list-style-type: none;
+    font-family: $text-font;
+    font-size: 16px;
+  }
+
+}
+
+.navigation::before {
+  content: "";
+  background-image: url('../images/hero.jpg');
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.6;
+  
+}
+
+.collapse-menu {
+  background-color: white;
+  height: calc(100vh - 100px);
+  min-height: 500px;
+  position: relative;
+  right: 100%;
+  left: -300px;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  z-index: 1;
+
+  &.active {
+    transition: all 0.5s ease-in-out;
+    right: 0;
+    left: 0;
+
+    .button-position {
+      right: 0;
+    }
+  }
+
+  .button-position {
+    right: -52px;
+  }
+}
+
+// from collapse X
+.navigation-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0px;
+
+  @include for-md {
+    display: none;
+  }
+}
+
+.navigation-desk-menu {
+  display: none;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+
+  @include for-md {
+    display: flex;
+  }
+
+  // from desktop menu
+  .menu-items {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 0;
+    gap: 27px;
+  }
+}
+
+.agency-name {
+  position: absolute;
+  font-size: 20px;
+  list-style-type: none;
+  font-family: $text-font;
+  left: 10%;
+  top: 47px;
+  color: black;
+  text-decoration: none;
+}
+
+//Dropdown menu desktop
+.nav-item-dropdown {
+  position: relative;
+  list-style-type: none;
+
+  &:hover>.dropdown-menu {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.dropdown-trigger {
+  position: relative;
+  font-family: $text-font;
+  font-size: 16px;
+
+  &:focus+.dropdown-menu {
+    display: block;
+    opacity: 1;
+  }
+
+  &::after {
+    content: "🢓";
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    right: -15px;
+  }
+}
+
+.dropdown-menu {
+  background-color: white;
+  display: inline-block;
+  text-align: left;
+  position: absolute;
+  top: 1.5rem;
+  right: -10px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  padding: 10px 50px 10px 5px;
+  border-top: 5px solid $text-green-color;
+}
+
+.dropdown-menu-item {
+  cursor: pointer;
+  padding: 5px;
+  text-align: left;
+  list-style-type: none;
+  font-family: $text-font;
+
+  &:hover {
+    color: $text-green-color;
+  }
+}
+
+// dropdown menu mobile
+.nav-item-dropdown-mob {
+  position: relative;
+  list-style-type: none;
+}
+
+.dropdown-trigger-mob {
+  position: relative;
+  font-family: $text-font;
+  font-size: 16px;
+
+  &:focus+.dropdown-menu-mob {
+    position: relative;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    gap: 10px;
+    opacity: 1;
+  }
+
+  &::after {
+    content: "🢓";
+    position: absolute;
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    right: -15px;
+  }
+}
+
+.dropdown-menu-mob {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10px;
+  right: -10px;
+  opacity: 0;
+  padding: 0;
+}
+
+.dropdown-menu-item-mob {
+  cursor: pointer;
+  padding: 5px;
+  text-align: left;
+  list-style-type: none;
+  font-family: $text-font;
+
+  &:hover {
+    color: $text-green-color
+  }
+}
+
+.story {
+  width: calc(100% - 250px);
+  position: absolute;
+  left: 11%;
+  right: 20%;
+  top: 20%;
+
+  .story-text {
+    display: flex;
+
+    text-align: center;
+    font-family: $text-font;
+    font-weight: 500;
+    line-height: normal;
+
+    @include for-md {
+      position: absolute;
+      font-size: 42px;
+      left: 20%;
+    }
+
+    @include for-lg {
+      left: 6%;
+      font-size: 52px;
+    }
+
+    @include for-xl {
+      font-size: 62px;
+      left: 2%;
+    }
+  }
+}
+
+.story-mob {
+  position: absolute;
+  display: flex;
+  left: 20%;
+  right: 20%;
+  top: 25%;
+
+  @include for-md {
+    display: none;
+  }
+
+  @include for-esm {
+    left: 20%;
+  }
+
+  .story-text-mob {
+    text-align: center;
+    font-family: $text-font;
+    font-size: 32px;
+    font-weight: 100;
+  }
+}
+
+.clients {
+  position: absolute;
+  display: flex;
+  left: 30%;
+  right: 30%;
+  top: 43%;
+
+  .clients-text {
+    text-align: center;
+    font-family: $text-font;
+    font-size: 18px;
+    font-weight: 100;
+  }
+
+  @include for-md {
+    font-size: 18px;
+    top: 40%;
+  }
+
+  @include for-lg {
+    font-size: 20px;
+    top: 45%;
+  }
+
+  @include for-xl {
+    font-size: 22px;
+    top: 48%; 
+    left: 32%;
+  }
+}
+
+.clients-mob {
+  position: absolute;
+  display: flex;
+  left: 30%;
+  right: 30%;
+  top: 40%;
+  padding-top: 20px;
+
+  @include for-exsm {
+    top: 43%;
+  }
+
+  @include for-esm {
+    margin-top: 10px;
+    top: 35%;
+    left: 27%;
+  }
+
+  @include for-md {
+    display: none;
+  }
+
+  .clients-text-mob {
+    text-align: center;
+    font-family: $text-font;
+    font-size: 14px;
+    font-weight: 100;
+  }
+}
+
+.btn {
+  width: 170px;
+  height: 50px;
+  background-color: transparent;
+  color: black;
+  border-radius: 50px;
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  top: 53%;
+
+  @include for-md {
+    left: 38%;
+  }
+
+  @include for-lg {
+    top: 57%;
+    left: 41%;
+  }
+
+  @include for-xl {
+    top: 60%;
+    left: 43.5%;
+  }
+
+
+  &:hover{
+    background-color: black;
+    color: white;
+  }
+}
+
+.btn-mob {
+  background-color: transparent;
+  color: black;
+  border-radius: 50px;
+  position: absolute;
+  left: 40%;
+  right: 40%;
+  top: 53%;
+
+  @include for-exsm {
+    top: 57%;
+    left: 33%;
+    width: 130px;
+    height: 40px;
+    margin-top: 10px;
+  }
+
+  @include for-esm {
+    top: 50%;
+    left: 37%;
+    width: 130px;
+    height: 40px;
+  }
+
+  @include for-sm {
+    top: 48%;
+    left: 36%;
+    width: 170px;
+    height: 50px;
+  }
+
+  @include for-md {
+    display: none;
+  }
+
+  &:focus{
+    background-color: black;
+    color: white;
+  }
+
+}
